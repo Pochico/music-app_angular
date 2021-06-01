@@ -1,4 +1,6 @@
-import { SongSearchServiceService } from './../../../pages/homescreen/services/song-search-service.service';
+import { Ihits } from './../../../models/ihits';
+import { Itracks } from './../../../models/itracks';
+import { SongSearchService } from '../../services/song-search.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,16 +11,25 @@ import { Component, OnInit } from '@angular/core';
 export class SearchbarComponent implements OnInit {
 
   public searchValue!: string;
+  public songRequestArray?: Ihits[];
 
-  constructor(private songSearchServiceService: SongSearchServiceService) { }
+  constructor(private songSearchService: SongSearchService) { }
 
   ngOnInit(): void {
+
   }
-
-
 
   public handleSearch() {
-    console.log('hola' + this.searchValue);
+    this.getSongs(this.searchValue);
   }
+
+  public getSongs(searchTerm: string) {
+    this.songSearchService.getSongs(searchTerm).subscribe((data: Itracks) => {
+      this.songRequestArray = data.tracks!.hits;
+      console.log(this.songRequestArray);
+    })
+  }
+
+
 
 }
