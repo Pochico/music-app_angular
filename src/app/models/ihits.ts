@@ -1,7 +1,7 @@
 import { Itrack } from './itrack';
 
 export interface Ihits {
-    track: Itrack
+    track: Itrack[]
 
     // track: {
     //     key: string,

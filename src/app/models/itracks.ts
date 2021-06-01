@@ -6,6 +6,6 @@ export interface Itracks {
     tracks?: {
         // hits: [{track: Itrack}],
         // artists: Iartists
-        hits: Ihits[],
+        hits: Ihits,
     }
 }

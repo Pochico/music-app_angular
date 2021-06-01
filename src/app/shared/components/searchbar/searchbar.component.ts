@@ -18,7 +18,7 @@ export class SearchbarComponent implements OnInit {
 
 
   public handleSearch() {
-    console.log('hola' + this.searchValue);
+    console.log('This is handle search');
   }
 
 }
