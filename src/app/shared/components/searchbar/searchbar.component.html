@@ -1,2 +1,2 @@
 <input type="text" id="search" placeholder="Search..." [(ngModel)]="searchValue">
-<button (click)="handleSearch()">Search</button>
+<button (click)="handleSearch(); emitSongs(songRequestArray)">Search</button>

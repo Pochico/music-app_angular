@@ -1,2 +1,3 @@
 <p>homescreen works!</p>
-<app-searchbar></app-searchbar>
+<app-searchbar (songRequestEmitter)="getSongRequest($event)"></app-searchbar>
+<h3 *ngFor="let track of songRequestReception"></h3>

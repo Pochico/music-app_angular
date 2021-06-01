@@ -1,7 +1,6 @@
-import { SongSearchServiceService } from './services/song-search-service.service';
+import { PopularSongService } from '../../shared/services/popular-songs.service';
 import { Component, OnInit } from '@angular/core';
 import { Ihits } from 'src/app/models/ihits';
-import { Itracks } from 'src/app/models/itracks';
 
 @Component({
   selector: 'app-homescreen',
@@ -11,21 +10,24 @@ import { Itracks } from 'src/app/models/itracks';
 
 export class HomescreenComponent implements OnInit {
 
-  public myCharacters: any;
-  // public mySongRequestList: Ihits[];
+  public songRequestReception?: Ihits[];
 
-  constructor(private songSearchServiceService: SongSearchServiceService) { }
+  constructor(private popularSongService: PopularSongService) { }
 
   ngOnInit(): void {
-    this.getSongs();
+    this.getPopularSongs();
   }
 
-  public getSongs(): void {
-    this.songSearchServiceService.getSongs().subscribe(
-      (data: Itracks) => {
-        console.log(data.tracks);
+  public getPopularSongs(): void {
+    this.popularSongService.getPopularSongs().subscribe(
+      (data:any) => {
+        console.log(data);
       }
     )
+  }
+
+  public getSongRequest(songRequest: Ihits[]) {
+    this.songRequestReception = songRequest;
   }
 
 }
