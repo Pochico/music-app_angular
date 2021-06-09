@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: linear-gradient(
+    130deg,
+    rgba(33, 33, 33, 1) 70%,
+    rgba(51, 16, 51, 1) 100%
+  );
+}
+html {
+  background: radial-gradient(ellipse at top, rgba(6,17,61, .4) 40%, rgba(51,16,51,.4) 100%);
+}
+body {
+  height: 100vh;
+  width: 100vw;
+}
+html {
+  background-color: #222122;
+  color: #eaeaea;
+}

@@ -1,11 +1,12 @@
-export interface Itrack {
+
+export interface IpopSong {
     key: string,
     title: string,
     subtitle: string,
     images: {
         coverart: string
     }
-    artistId: [{
+    artists: [{
         id: string
     }],
     url: string,

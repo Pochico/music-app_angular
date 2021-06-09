@@ -1,0 +1,10 @@
+
+
+<div class="popular-song" [routerLink]="['/song-detail', popularSong.key]">
+    <div class="img-container">
+        <img class="popular-song-img" src="{{popularSong.images.coverart}}" alt="{{popularSong.title}}">
+        <img class="song-img-bg" src="{{popularSong.images.coverart}}" alt="">  
+    </div>
+    <h3 class="popular-song-title">{{popularSong.title}}</h3>
+    <h4 class="popular-song-artist">{{popularSong.subtitle}}</h4>
+</div>

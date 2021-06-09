@@ -9,7 +9,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { HomescreenComponent } from './pages/homescreen/homescreen.component';
-import { SearchbarComponent } from './shared/components/searchbar/searchbar.component';
+import { SearchbarComponent } from './shared/searchbar.component';
+import { SongItemComponent } from './shared/components/song-item/song-item/song-item.component';
+import { PopularSongComponent } from './pages/homescreen/popular-song-component/popular-song/popular-song.component';
+import { SongDetailComponent } from './pages/song-detail/song-detail/song-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { SearchbarComponent } from './shared/components/searchbar/searchbar.comp
     HeaderComponent,
     FooterComponent,
     HomescreenComponent,
-    SearchbarComponent
+    SearchbarComponent,
+    SongItemComponent,
+    PopularSongComponent,
+    SongDetailComponent
   ],
   imports: [
     BrowserModule,

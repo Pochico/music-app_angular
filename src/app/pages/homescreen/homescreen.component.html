@@ -1,3 +1,28 @@
-<p>homescreen works!</p>
 <app-searchbar (songRequestEmitter)="getSongRequest($event)"></app-searchbar>
-<h3 *ngFor="let track of songRequestReception"></h3>
+
+<div class="song-search-list">
+    <ng-container *ngIf="songRequestReception">
+        <h4>Results:</h4>
+        <app-song-item *ngFor="let track of songRequestReception" [songData]="track"></app-song-item>
+    </ng-container>
+</div>
+
+<h3 class="text-center">TOP Songs in: <u>Madrid</u></h3>
+<div class="pop-songs-row" *ngIf="popularSongRequest">
+    <app-popular-song *ngFor="let song of popularSongRequest.tracks" [popularSong]="song"></app-popular-song>
+</div>
+
+<!-- 
+
+    Cuando haces petición en el search, devuelve lista de canciones y/o lista de artistas. cuando vas al artista el artista debe hacer otra petición con el ID del artista y devolverte sus canciones. 
+
+    Componente elemento de lista de canciones en lista search: 
+     - Carátula
+     - Título
+     - Artista
+     
+    Componente elemento de lista de canciones en lista artista:
+     - Carátula
+     - Título 
+    
+-->

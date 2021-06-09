@@ -1,0 +1,14 @@
+<div class="search-container">
+    <input 
+        class="search-input" 
+        type="text" 
+        id="search" 
+        placeholder="Search..." 
+        [(ngModel)]="searchValue"
+        (focus)="buttonDisplay(true)"
+        (blur)="buttonDisplay(false)"
+        autocomplete="off"
+        (keyup)="handleSearch(); emitSongs(songRequestArray)"
+    >
+    <button id="search-button" (click)="handleSearch(); emitSongs(songRequestArray)">S</button>
+</div>

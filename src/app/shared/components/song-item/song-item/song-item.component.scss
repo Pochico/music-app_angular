@@ -1,0 +1,29 @@
+.music-list-container {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  padding: 6px 0;
+
+  img {
+    margin-right: 20px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .song-text-data {
+    padding: 6px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    p {
+      padding: 0;
+      margin: 0;
+
+      &.artist {
+        color: #C1C1C1;
+      }
+    }
+  }
+}
