@@ -1,8 +1,5 @@
 
-
-<!-- <div class="music-list-container" [routerLink]="['/song-detail', songData.track.key]"> -->
-<!-- TODO: add routerLink to music-list-container, it throws an error when doing it normally -->
-<div class="music-list-container">
+<div class="music-list-container" [routerLink]="['/song-detail', songData.track.key]">
     <img src="{{ songData.track.images.coverart }}" alt="{{songData.track.title}}">
     <div class="song-text-data">
         <p class="title">{{songData.track.title}}</p>
