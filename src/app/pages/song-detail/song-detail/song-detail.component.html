@@ -1,6 +1,11 @@
-<div>
+<div class="song-detail">
     <img src="{{ detailedSong.images.coverart }}" alt="{{detailedSong.title}}">
     <h3>{{ detailedSong.title }}</h3>
     <h4>{{ detailedSong.subtitle }}</h4>
-    <iframe src="{{detailedSong.url}}" frameborder="0"></iframe>
+    <!-- <iframe *ngIf="trustedUrl" [src]="trustedUrl" frameborder="0"></iframe> -->
+    <button>
+        <a href="{{detailedSong.url}}" target="_blank">
+            Escuchar <strong>{{detailedSong.title}}</strong> en Shazam
+        </a>
+    </button>
 </div>

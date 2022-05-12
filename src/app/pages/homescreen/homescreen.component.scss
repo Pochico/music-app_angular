@@ -1,21 +1,25 @@
 .song-search-list {
   padding: 0 24px;
+  display: flex;
+  gap: 1rem;
 }
 
 .pop-songs-row {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  gap: 2rem;
   overflow: scroll;
   width: 100vw;
   margin-top: auto;
+  flex-wrap: wrap;
 
   @media screen and (min-width: 767px) {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
     overflow: unset;
   }
 }
 
 .text-center {
   text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
 }

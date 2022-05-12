@@ -13,6 +13,8 @@ import { SearchbarComponent } from './shared/searchbar.component';
 import { SongItemComponent } from './shared/components/song-item/song-item/song-item.component';
 import { PopularSongComponent } from './pages/homescreen/popular-song-component/popular-song/popular-song.component';
 import { SongDetailComponent } from './pages/song-detail/song-detail/song-detail.component';
+import { RouterModule } from '@angular/router';
+import { SafePipe } from './pages/song-detail/song-detail/song-pipe';
 
 @NgModule({
   declarations: [
@@ -23,16 +25,19 @@ import { SongDetailComponent } from './pages/song-detail/song-detail/song-detail
     SearchbarComponent,
     SongItemComponent,
     PopularSongComponent,
-    SongDetailComponent
+    SongDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [
+    SafePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

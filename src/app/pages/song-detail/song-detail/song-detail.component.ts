@@ -3,6 +3,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { IdetailSong } from 'src/app/models/idetail-song';
 import { SongDetailService } from './song-detail-service/song-detail.service';
+import { SafePipe } from './song-pipe'
 
 @Component({
   selector: 'app-song-detail',
@@ -12,12 +13,11 @@ import { SongDetailService } from './song-detail-service/song-detail.service';
 export class SongDetailComponent implements OnInit {
 
 
-  // TODO: esta vaina si la pongo como string | undefined me da error más abajo, ver cómo gestionar el tipado
   public key!: any;
   public detailedSong: any;
   public trustedUrl!: SafeUrl;
 
-  constructor(private route: ActivatedRoute, private songDetailService: SongDetailService, private sanitizer: DomSanitizer) { }
+  constructor(private route: ActivatedRoute, private songDetailService: SongDetailService, private sanitizer: DomSanitizer, private safePipe: SafePipe) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -31,10 +31,10 @@ export class SongDetailComponent implements OnInit {
       (data: any) => {
         let dataResponse: IdetailSong = data
         this.detailedSong = dataResponse;
+        this.trustedUrl = this.safePipe.transform(this.detailedSong.url);
         console.log(this.detailedSong);
-        this.trustedUrl = this.sanitizer.bypassSecurityTrustUrl(this.detailedSong.url);
       }
     )
   }
-
+  
 }
