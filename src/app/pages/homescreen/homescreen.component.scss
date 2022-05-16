@@ -1,25 +1,42 @@
 .song-search-list {
-  padding: 0 24px;
-  display: flex;
-  gap: 1rem;
+	padding: 0 24px;
+	display: flex;
+	gap: 1rem;
 }
 
 .pop-songs-row {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  overflow: scroll;
-  width: 100vw;
-  margin-top: auto;
-  flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	gap: 1.2rem;
+	overflow: scroll;
+	width: 100vw;
+	margin-top: auto;
+	flex-wrap: wrap;
 
-  @media screen and (min-width: 767px) {
-    overflow: unset;
-  }
+	@media screen and (min-width: 767px) {
+		overflow: unset;
+	}
 }
 
 .text-center {
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 20px;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 20px;
+}
+
+.content-container {
+	padding: 2rem;
+}
+
+.song-search-container {
+	width: 100%;
+
+	.results-title {
+		padding-left: 24px;
+	}
+}
+
+app-song-item{
+	cursor: pointer;
+	outline: none;
 }

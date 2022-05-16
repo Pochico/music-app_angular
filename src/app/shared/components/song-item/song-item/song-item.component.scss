@@ -1,26 +1,12 @@
 .music-list-container {
-  display: flex;
-  flex-direction: column;
-  padding: 6px 0;
+	display: flex;
+	flex-direction: column;
+	padding: 6px 0;
+	width: 100%;
 
-  // img {
-  //   object-fit: cover;
-  //   border-radius: 10px;
-  // }
-
-  // .song-text-data {
-  //   padding: 6px 0;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-evenly;
-    
-  //   p {
-  //     padding: 0;
-  //     margin: 0;
-
-  //     &.artist {
-  //       color: #C1C1C1;
-  //     }
-  //   }
-  // }
+	img{
+		width: 100%;
+		object-fit: cover;
+		border-radius: 1rem;
+	}
 }
